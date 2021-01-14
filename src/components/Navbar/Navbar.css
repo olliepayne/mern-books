@@ -3,6 +3,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   background-color: rgb(24, 45, 52);
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 nav > h2 {
