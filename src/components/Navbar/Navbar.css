@@ -14,3 +14,13 @@ nav {
 .nav-links li {
   margin: 0 10px;
 }
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links li a:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
