@@ -3,7 +3,8 @@ import { Route } from 'react-router-dom'
 import './App.css';
 import * as booksAPI from '../../services/books-api'
 import Navbar from '../../components/Navbar/Navbar'
-import Landing from '../../pages/Landing/Landing'
+import Landing from '../Landing/Landing'
+import BooksList from '../BooksList/BooksList'
 
 function App() {
   useEffect(() => {
@@ -15,10 +16,16 @@ function App() {
       <Navbar />
       <Route
         exact path="/"
-        render={() => {
+        render={() =>
           <Landing />
         }
-      }/>
+      />
+      <Route
+        exact path="/books"
+        render={() =>
+          <BooksList />
+        }
+      />
     </div>
   );
 }
