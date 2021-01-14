@@ -2,6 +2,11 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: rgb(24, 45, 52);
+}
+
+nav > h2 {
+  color: white;
 }
 
 .nav-links {
@@ -17,7 +22,7 @@ nav {
 
 .nav-links li a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .nav-links li a:hover {
