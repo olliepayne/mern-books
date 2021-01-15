@@ -25,7 +25,7 @@ const Book = (props) => {
     //   </li>
     // </div>
     <li key={index}>
-      <div className="book-card" onClick={handleOpen} >
+      <div className="book-card" onMouseEnter={handleOpen} onMouseLeave={handleOpen} >
         {isOpen ?
             <>
               <span className="book-title">{book.title}</span>, by {book.author}
