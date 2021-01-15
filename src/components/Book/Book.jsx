@@ -10,22 +10,8 @@ const Book = (props) => {
   }
 
   return (
-    // <div className="book-card" onClick={handleOpen} >
-    //   <li key={index}>
-    //     {isOpen ?
-    //       <>
-    //         <span className="book-title">{book.title}</span>, by {book.author}
-    //         {book.pages !== undefined ? <p>{book.pages} pages</p> : ''}
-    //         <button className="update-btn">Update</button>
-    //         <button className="delete-btn">Delete</button>
-    //       </>
-    //       :
-    //       <img className="book-image" src={book.imageURL} alt={book.title} />
-    //     }
-    //   </li>
-    // </div>
     <li key={index}>
-      <div className="book-card" onMouseEnter={handleOpen} onMouseLeave={handleOpen} >
+      <div className="book-card" onClick={handleOpen} onMouseLeave={() => isOpen ? handleOpen() : ''} >
         {isOpen ?
             <>
               <span className="book-title">{book.title}</span>, by {book.author}
