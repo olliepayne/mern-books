@@ -5,3 +5,7 @@ export function create(book) {
     
   })
 }
+
+export function getAllBooks() {
+  return fetch(`${BASE_URL}`)
+}

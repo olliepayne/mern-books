@@ -4,18 +4,20 @@ import './App.css';
 import * as booksAPI from '../../services/books-api'
 import Navbar from '../../components/Navbar/Navbar'
 import Landing from '../Landing/Landing'
+import AddBook from '../AddBook/AddBook'
 import BooksList from '../BooksList/BooksList'
 
 function App() {
   const [books, setBooks] = useState([])
 
-  const getAllBooks = () => {
-    
+  const getAllBooks = async () => {
+    const booksData = await booksAPI.getAllBooks()
+    setBooks(booksData)
   }
 
   useEffect(() => {
-    setBooks()
-  })
+    getAllBooks()
+  }, [])
 
   return (
     <div className="App">
@@ -30,6 +32,12 @@ function App() {
         exact path="/books"
         render={() =>
           <BooksList />
+        }
+      />
+      <Route
+        exact path="/books/new"
+        render={() =>
+          <AddBook />
         }
       />
     </div>
