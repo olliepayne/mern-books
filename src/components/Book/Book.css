@@ -1,6 +1,7 @@
 .book-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: rgb(229, 234, 237);
   width: 200px;
   height: 300px;
@@ -8,11 +9,13 @@
   margin: 0 0 20px 0;
   padding: 10px 10px;
   font-size: 100%;
+  transition: 0.25s;
 }
 
 .book-card:hover {
   opacity: 75%;
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .book-image {
@@ -23,4 +26,42 @@
 
 .book-title {
   font-weight: bold;
+}
+
+.btn-container {
+  
+}
+
+.update-btn {
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 5%;
+  width: 60px;
+  height: 30px;
+  transition: 0.25s;
+}
+
+.update-btn:hover {
+  opacity: 75%;
+  cursor: pointer;
+  transform: scale(1.1)
+}
+
+.delete-btn {
+  background-color: salmon;
+  color: white;
+  font-size: 1em;
+  border: none;
+  border-radius: 5%;
+  width: 60px;
+  height: 30px;
+  transition: 0.25s;
+}
+
+.delete-btn:hover {
+  opacity: 75%;
+  cursor: pointer;
+  transform: scale(1.1)
 }
