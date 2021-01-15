@@ -4,7 +4,7 @@ const BooksList = (props) => {
   const { books } = props
 
   return (
-    <div className="books-list-container">
+    <div className="book-list-container">
       <h1>All Books.</h1>
       {books.length > 0 ?
         <ul className="book-card-list">
