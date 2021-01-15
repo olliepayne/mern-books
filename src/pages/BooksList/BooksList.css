@@ -1,3 +1,7 @@
+h1 {
+ margin: 5px 0 0 5px;
+}
+
 .book-card-list {
   display: flex;
   justify-content: space-around;
@@ -12,6 +16,17 @@
   background-color: rgb(229, 234, 237);
   width: 200px;
   height: 300px;
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
   padding: 10px 10px;
+  font-size: 30px;
+}
+
+.book-title {
+  font-weight: bold;
+}
+
+.loading-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
