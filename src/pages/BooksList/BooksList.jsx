@@ -1,4 +1,5 @@
 import './BooksList.css'
+import Book from '../../components/Book/Book'
 
 const BooksList = (props) => {
   const { books } = props
@@ -9,17 +10,11 @@ const BooksList = (props) => {
       {books.length > 0 ?
         <ul className="book-card-list">
           {props.books.map((book, index) => (
-            <div className="book-card">
-              {book.imageURL !== undefined ? <img className="book-image" src={book.imageURL} alt="" /> : ''}
-              <li key={index}>
-                <span className="book-title">{book.title}</span>, by {book.author}
-                {book.pages !== undefined ? <p>{book.pages} pages</p> : ''}
-              </li>
-            </div>
+            <Book index={index} book={book} />
           ))}
         </ul>
         :
-        <img className="loading-img" src="" alt="Loading..." />
+        <img className="loading-img" src="#" alt="Loading..." />
       }
     </div>
   )

@@ -14,28 +14,6 @@ h1 {
   padding: 0;
 }
 
-.book-card {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(229, 234, 237);
-  width: 200px;
-  height: 300px;
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
-  margin: 0 0 20px 0;
-  padding: 10px 10px;
-  font-size: 100%;
-}
-
-.book-image {
-  margin: 0 0 8px 0;
-  width: 200px;
-  height: 300px;
-}
-
-.book-title {
-  font-weight: bold;
-}
-
 .loading-img {
   text-align: center;
 }
