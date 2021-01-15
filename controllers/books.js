@@ -4,6 +4,7 @@ module.exports = {
   create,
   index,
   update,
+  delete: deleteOne
 }
 
 function create(req, res) {
@@ -13,12 +14,15 @@ function create(req, res) {
 
 function index(req, res) {
   Book.find({})
-  .then(books => {res.json(books)})
-  .catch(err => {res.json(err)})
+  .then(books => res.json(books))
 }
 
 function update(req, res) {
   Book.findByIdAndUpdate(req.params.id, req.body, {new: true})
-  .then(book => {res.json(book)})
-  .catch(err => {res.json(err)})
+  .then(book => res.json(book))
+}
+
+function deleteOne(req, res) {
+  Book.findByIdAndDelete(req.params.id)
+  .then(book => res.json(book))
 }
