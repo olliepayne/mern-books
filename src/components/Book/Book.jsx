@@ -11,13 +11,15 @@ const Book = (props) => {
 
   return (
     <li key={index}>
-      <div className="book-card" onClick={handleOpen} onMouseLeave={() => isOpen ? handleOpen() : ''} >
+      <div className="book-card" onClick={handleOpen} onMouseLeave={() => isOpen ? handleOpen() : null} >
         {isOpen ?
             <>
-              <span className="book-title">{book.title}</span>, by {book.author}
-              {book.pages !== undefined ? <>{book.pages} pages</> : ''}
+              <p>
+                <span className="book-title">{book.title}</span>, by {book.author}
+                <br />
+                {book.pages !== undefined ? <>{book.pages} pages</> : null}
+              </p>
               <div className="btn-container">
-                <button className="update-btn">Update</button>
                 <button className="delete-btn">Delete</button>
               </div>
             </>
