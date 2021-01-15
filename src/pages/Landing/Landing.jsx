@@ -1,6 +1,6 @@
 const Landing = () => {
   return (
-    <div>
+    <div className="landing-container">
       <h1>Welcome to MERN Books practice project!</h1>
     </div>
   )
