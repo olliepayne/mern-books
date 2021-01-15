@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  res.send('hello world!')
-})
+const booksCtrl = require('../controllers/books')
+
+router.get('/', booksCtrl.index)
+router.post('/', booksCtrl.create)
 
 module.exports = router
