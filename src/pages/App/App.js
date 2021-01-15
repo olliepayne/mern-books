@@ -7,8 +7,14 @@ import Landing from '../Landing/Landing'
 import BooksList from '../BooksList/BooksList'
 
 function App() {
-  useEffect(() => {
+  const [books, setBooks] = useState([])
 
+  const getAllBooks = () => {
+    
+  }
+
+  useEffect(() => {
+    setBooks()
   })
 
   return (

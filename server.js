@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
+const cors = require('cors')
 
 const booksRouter = require('./routes/books')
 
@@ -11,6 +12,7 @@ const port = process.env.PORT || 3001
 require('dotenv').config()
 require('./config/database')
 
+app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')))
