@@ -14,6 +14,18 @@ h1 {
   padding: 0;
 }
 
-.loading-img {
+.loading {
   text-align: center;
+  font-size: 1.2em;
+  animation: pop;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pop {
+  from {
+    transform: scale((1))
+  }
+  to {
+    transform: scale((1.1))
+  }
 }

@@ -5,7 +5,7 @@ import * as booksAPI from '../../services/books-api'
 import Navbar from '../../components/Navbar/Navbar'
 import Landing from '../Landing/Landing'
 import AddBook from '../AddBook/AddBook'
-import BooksList from '../BooksList/BooksList'
+import BookList from '../BookList/BookList'
 
 function App() {
   const [books, setBooks] = useState([])
@@ -31,7 +31,7 @@ function App() {
       <Route
         exact path="/books"
         render={() =>
-          <BooksList books={books} />
+          <BookList books={books} />
         }
       />
       <Route

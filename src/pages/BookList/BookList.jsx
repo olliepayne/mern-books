@@ -1,7 +1,7 @@
-import './BooksList.css'
+import './BookList.css'
 import Book from '../../components/Book/Book'
 
-const BooksList = (props) => {
+const BookList = (props) => {
   const { books } = props
 
   return (
@@ -14,10 +14,12 @@ const BooksList = (props) => {
           ))}
         </ul>
         :
-        <img className="loading-img" src="#" alt="Loading..." />
+        <div className="loading">
+          <p>Loading Library...</p>
+        </div>
       }
     </div>
   )
 }
 
-export default BooksList
+export default BookList
