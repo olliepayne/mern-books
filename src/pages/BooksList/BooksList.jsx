@@ -10,14 +10,16 @@ const BooksList = (props) => {
         <ul className="book-card-list">
           {props.books.map((book, index) => (
             <div className="book-card">
-              <li key={index}><span className="book-title">{book.title}</span>, by {book.author}
+              {book.imageURL !== undefined ? <img className="book-image" src={book.imageURL} alt="" /> : ''}
+              <li key={index}>
+                <span className="book-title">{book.title}</span>, by {book.author}
                 {book.pages !== undefined ? <p>{book.pages} pages</p> : ''}
               </li>
             </div>
           ))}
         </ul>
         :
-        <img className="loading-img" src="" alt="Loading..."/>
+        <img className="loading-img" src="" alt="Loading..." />
       }
     </div>
   )

@@ -1,5 +1,5 @@
 .book-list-container {
-  margin: 0 8px 0 8px;
+  margin: 0 10px 0 10px;
 }
 
 h1 {
@@ -8,7 +8,7 @@ h1 {
 
 .book-card-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
@@ -23,7 +23,13 @@ h1 {
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
   margin: 0 0 20px 0;
   padding: 10px 10px;
-  font-size: 30px;
+  font-size: 100%;
+}
+
+.book-image {
+  margin: 0 0 8px 0;
+  width: 200px;
+  height: 300px;
 }
 
 .book-title {
@@ -31,7 +37,5 @@ h1 {
 }
 
 .loading-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
