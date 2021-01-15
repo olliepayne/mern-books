@@ -1,3 +1,5 @@
+import './BooksList.css'
+
 const BooksList = (props) => {
   const { books } = props
 
@@ -5,11 +7,13 @@ const BooksList = (props) => {
     <div className="books-list-container">
       <h1>All Books.</h1>
       {books.length > 0 ?
-        <ul>
+        <ul className="book-card-list">
           {props.books.map((book, index) => (
-            <li key={index}>{book.title}, by {book.author}
-              {book.pages !== null ? <p>{book.pages} pages</p> : ''}
-            </li>
+            <div className="book-card">
+              <li key={index}>{book.title}, by {book.author}
+                {book.pages !== null ? <p>{book.pages} pages</p> : ''}
+              </li>
+            </div>
           ))}
         </ul>
         :

@@ -1,0 +1,16 @@
+.book-card-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  background-color: peachpuff;
+  width: 200px;
+  height: 300px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
