@@ -31,7 +31,7 @@ function App() {
       <Route
         exact path="/books"
         render={() =>
-          <BooksList />
+          <BooksList books={books} />
         }
       />
       <Route

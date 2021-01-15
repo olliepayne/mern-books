@@ -12,5 +12,6 @@ function create(req, res) {
 
 function index(req, res) {
   Book.find({})
-  .then(books => res.json(books))
+  .then(books => {res.json(books)})
+  .catch(err => {res.json(err)})
 }
