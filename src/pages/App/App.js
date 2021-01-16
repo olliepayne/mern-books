@@ -18,6 +18,8 @@ function App() {
   const deleteBook = async (id) => {
     await booksAPI.deleteOne(id)
     setBooks(books.filter(b => b.id !== id))
+
+    getAllBooks()
   }
 
   const bookFunctions = {
@@ -26,7 +28,7 @@ function App() {
 
   useEffect(() => {
     getAllBooks()
-  }, [deleteBook])
+  }, [])
 
   return (
     <div className="App">
