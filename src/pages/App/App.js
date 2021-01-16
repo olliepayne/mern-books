@@ -15,9 +15,18 @@ function App() {
     setBooks(booksData)
   }
 
+  const deleteBook = async (id) => {
+    await booksAPI.deleteOne(id)
+    setBooks(books.filter(b => b.id !== id))
+  }
+
+  const bookFunctions = {
+    delete: deleteBook
+  }
+
   useEffect(() => {
     getAllBooks()
-  }, [])
+  }, [deleteBook])
 
   return (
     <div className="App">
@@ -31,7 +40,7 @@ function App() {
       <Route
         exact path="/books"
         render={() =>
-          <BookList books={books} />
+          <BookList books={books} bookFunctions={bookFunctions}/>
         }
       />
       <Route

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './Book.css'
 
 const Book = (props) => {
-  const { index, book } = props
+  const { index, book, bookFunctions } = props
   const [isOpen, setIsOpen] = useState(false)
 
   const handleOpen = () => {
@@ -20,7 +20,7 @@ const Book = (props) => {
                 {book.pages !== undefined ? <>{book.pages} pages</> : null}
               </p>
               <div className="btn-container">
-                <button className="delete-btn">Delete</button>
+                <button className="delete-btn" onClick={() => bookFunctions.delete(book._id)}>Delete</button>
               </div>
             </>
             :

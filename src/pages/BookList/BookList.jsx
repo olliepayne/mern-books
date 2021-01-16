@@ -10,7 +10,7 @@ const BookList = (props) => {
       {books.length > 0 ?
         <ul className="book-card-list">
           {props.books.map((book, index) => (
-            <Book index={index} book={book} />
+            <Book index={index} book={book} bookFunctions={props.bookFunctions} />
           ))}
         </ul>
         :
