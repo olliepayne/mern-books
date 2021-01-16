@@ -2,8 +2,9 @@ const BASE_URL = '/api/books/';
 
 export function create(book) {
   return fetch(BASE_URL, {
-    
-  })
+    method: 'POST',
+    body: JSON.stringify(book)
+  }, {mode: 'cors'})
 }
 
 export function getAllBooks() {
@@ -11,7 +12,7 @@ export function getAllBooks() {
   .then(res => res.json())
 }
 
-export function update() {
+export function update(id) {
 
 }
 
